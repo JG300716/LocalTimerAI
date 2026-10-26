@@ -27,7 +27,7 @@ import uuid
 import webbrowser
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 LOG = logging.getLogger("localflow")
 
 

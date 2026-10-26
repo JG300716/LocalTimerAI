@@ -70,7 +70,9 @@ window and local dashboard. Edit config.json to configure tracked applications.
 Start.cmd can start the Python service directly. Exit in the LocalFlow window
 stops the service. Activity data and local API keys are created in data/ on first run.
 No user history, account keys, local configuration or desktop-specific script
-is included in this archive. See README.md and INTEGRATIONS.md for details.
+is included in this archive.
+English documentation: README.en.md, INTEGRATIONS.en.md, TESTING.en.md.
+Polish documentation: README.md, INTEGRATIONS.md, TESTING.md.
 "@
     [IO.File]::WriteAllText((Join-Path $releaseStage 'RELEASE.txt'), $releaseNotice, (New-Object Text.UTF8Encoding($false)))
     Add-Type -AssemblyName System.IO.Compression.FileSystem
