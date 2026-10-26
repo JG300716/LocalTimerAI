@@ -1,0 +1,27 @@
+{
+  "server": { "port": 48763 },
+  "timezone": "Europe/Warsaw",
+  "tracking": {
+    "enabled": true,
+    "poll_seconds": 2,
+    "idle_seconds": 120,
+    "capture_titles": false
+  },
+  "applications": [
+    { "exe": "rider64.exe", "label": "Rider", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "rider.exe", "label": "Rider", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "Code.exe", "label": "VS Code", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "Cursor.exe", "label": "Cursor", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "devenv.exe", "label": "Visual Studio", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "idea64.exe", "label": "IntelliJ IDEA", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "pycharm64.exe", "label": "PyCharm", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "clion64.exe", "label": "CLion", "category": "coding", "project": "", "mode": "foreground" },
+    { "exe": "webstorm64.exe", "label": "WebStorm", "category": "coding", "project": "", "mode": "foreground" }
+  ],
+  "ai": {
+    "enabled": true,
+    "poll_seconds": 15,
+    "codex_paths": ["~/.codex/sessions"],
+    "claude_paths": ["~/.claude/projects"]
+  }
+}
