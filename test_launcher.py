@@ -10,6 +10,7 @@ import socket
 import subprocess
 import tempfile
 import threading
+import time
 import unittest
 
 LAUNCHER = Path(os.environ.get("LOCALFLOW_TEST_EXE", str(Path(__file__).with_name("LocalFlow.exe"))))
@@ -191,7 +192,14 @@ class LauncherTests(unittest.TestCase):
                 (root / "config.json").write_text(json.dumps({"server": {"port": service.server_port}}))
                 tray = subprocess.Popen([str(executable), "--no-browser", "--background"], cwd=folder)
                 try:
-                    self.assertTrue(ready.wait(7), "Tray did not query isolated service")
+                    # EnsureService allows 25 seconds after CLR/WinForms startup.
+                    # A cold hosted Windows runner can spend several seconds
+                    # starting the first native process before reaching Boot.
+                    deadline = time.monotonic() + 35
+                    while not ready.wait(0.1) and time.monotonic() < deadline:
+                        self.assertIsNone(tray.poll(), "Tray exited before service startup")
+                    self.assertTrue(ready.is_set(),
+                                    f"Tray did not query isolated service; start marker exists: {start_marker.exists()}")
                     self.assertTrue(start_marker.exists(), "Tray did not start its hidden Start.cmd")
                     self.assertIsNone(tray.poll(), "Tray exited before its menu could be used")
                     duplicate = subprocess.run([str(executable), "--no-browser", "--background"], cwd=folder, timeout=5)
