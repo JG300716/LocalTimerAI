@@ -22,6 +22,7 @@ RELEASE_FILES = {
     "Start.cmd", "Stop.cmd", "StartHidden.ps1", "StartHidden.vbs",
     "BuffedTestVoid.vbs",
     "EnableAutostart.ps1", "DisableAutostart.ps1", "README.md", "INTEGRATIONS.md", "TESTING.md",
+    "README.en.md", "INTEGRATIONS.en.md", "TESTING.en.md",
     "web/index.html", "web/app.js", "web/styles.css", "config.json", "LocalFlow.exe", "RELEASE.txt",
 }
 

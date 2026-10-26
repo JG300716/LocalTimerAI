@@ -34,7 +34,7 @@ $releaseFiles = @(
     'Start.cmd', 'Stop.cmd', 'StartHidden.ps1', 'StartHidden.vbs',
     'BuffedTestVoid.vbs',
     'EnableAutostart.ps1', 'DisableAutostart.ps1',
-    'README.md', 'INTEGRATIONS.md', 'TESTING.md',
+    'README.md', 'README.en.md', 'INTEGRATIONS.md', 'INTEGRATIONS.en.md', 'TESTING.md', 'TESTING.en.md',
     'web/index.html', 'web/app.js', 'web/styles.css'
 )
 

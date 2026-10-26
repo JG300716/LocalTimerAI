@@ -1,3 +1,5 @@
+[Polski](TESTING.md) | [English](TESTING.en.md)
+
 # Testowanie LocalFlow
 
 Testy należy uruchamiać z katalogu projektu. Aplikacja używa biblioteki standardowej

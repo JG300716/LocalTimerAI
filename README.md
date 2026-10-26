@@ -1,5 +1,7 @@
 # LocalTimerAI — LocalFlow
 
+[Polski](README.md) | [English](README.en.md)
+
 Lokalny tracker pracy i dashboard dla Windows. Bez konta, abonamentu, zewnętrznych
 skryptów ani limitu przechowywania historii. Aplikacja i strona pracują na tym
 samym komputerze; serwer słucha wyłącznie na `127.0.0.1`.

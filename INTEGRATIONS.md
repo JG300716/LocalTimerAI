@@ -1,5 +1,7 @@
 # Integracje LocalFlow
 
+[Polski](INTEGRATIONS.md) | [English](INTEGRATIONS.en.md)
+
 ## IDE przez istniejące wtyczki WakaTime
 
 LocalFlow przyjmuje heartbeat z wtyczek Rider/JetBrains, VS Code i innych edytorów
@@ -27,8 +29,9 @@ api_url = http://127.0.0.1:48763/api/v1
 api_key = KLUCZ_Z_LOCALFLOW
 ```
 
-W panelu tryb lokalny nosi nazwę **local-only**; odpowiada parametrowi
-`mode="local"` funkcji `configure_wakatime(...)`.
+W panelu wybierz **Główny zapis lokalnie**. Ta opcja wysyła do API tryb
+`local-only`, który odpowiada parametrowi `mode="local"` funkcji
+`configure_wakatime(...)`.
 Funkcja wykonuje zmianę dopiero po jej wywołaniu.
 Przed zapisaniem tworzy obok konfiguracji kopię `.localflow-backup-DATA`.
 Nie wywołuje się podczas startu trackera. Uruchom IDE ponownie po zmianie.
